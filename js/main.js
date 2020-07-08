@@ -187,11 +187,10 @@ jQuery(function($) {'use strict';
 	});
 
 	//Hide dropdown after click on menú items
-	$(function () {
-        $('.navbar-collapse ul li a:not(.dropdown-toggle)').bind('click touchstart', function () {
-                $('.navbar-toggle:visible').click();
-        });
-    });
+		$('.nav li a').click(function() {
+			console.log("aaa");
+		 $('.navbar-collapse').collapse('hide');
+	 });
 
 
 });
