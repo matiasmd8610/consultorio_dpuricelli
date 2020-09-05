@@ -885,12 +885,14 @@ ul.nostyle i {
   /*FOOTER*/
   #footer {
     padding-bottom: 5px;
+    text-align: center;
   }
 
   #footer .developer p {
-    float: left;
-    width: 90%;
+    float: none;
+    width: 100%;
     line-height: 1.2;
+    font-size: 0.9em;
   }
 
   .media.service-box {
