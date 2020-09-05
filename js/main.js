@@ -188,9 +188,23 @@ jQuery(function($) {'use strict';
 
 	//Hide dropdown after click on menú items
 		$('.nav li a').click(function() {
-			console.log("aaa");
 		 $('.navbar-collapse').collapse('hide');
+		 $('.overlay').hide();
 	 });
+
+	 //Overlay background when dropdown is open 
+	 $(".navbar-toggle").on("click", function() {
+  	$(".overlay").fadeIn("fast");
+	 });
+
+	 $('.collapse').on('hidden.bs.collapse', function() {
+		 $('.overlay').fadeOut();
+	});
+
+	$(".overlay").on("click", function() {
+  	$(this).fadeOut('slow');
+		$('.navbar-collapse').collapse('hide');
+	})
 
 
 });

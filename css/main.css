@@ -234,9 +234,19 @@ ul.nostyle i {
   font-size: 35px;
 }
 
-#description-dp .social img {
+#description-dp .social a {
   display: inline-block;
-  margin: 10px 2px;
+  margin: 10px 6px;
+  font-size: 28px;
+  color: #777;
+}
+
+#description-dp .social a.facebook-icon:hover i {
+  color: #4267B2;
+}
+
+#description-dp .social a.contact-icon:hover i {
+  color: #45aed6;
 }
 
 #main-slider {
@@ -665,77 +675,17 @@ ul.nostyle i {
   float: right;
 }
 
-/******************** MEDIA QUERYS ***********************/
-@media only screen and (max-width: 767px) {
-  .section-header .section-title {
-    font-size: 30px;
-  }
-
-  .media.service-box .pull-left {
-    margin-right: 10px;
-  }
-
-  /*HEADER*/
-  #header .navbar-brand {
-    width: 75%;
-    float: left;
-    margin-left: 2%;
-    max-width: 280px;
-  }
-
-  #header .navbar-brand>img {
+.overlay {
     width: 100%;
-  }
-
-  /*HOME*/
-  #main-slider .item {
-    height: 320px;
-  }
-
-  /*CONSULTORIO*/
-  #pricing .image-front {
-    margin-top: 20px;
-  }
-
-  #pricing .image-front img {
-    width: 100%;
-  }
-
-  /*CONTACTO*/
-  #contact #main-contact-form, #contact address {
-    width: 95%;
-  }
-
-  #contact #main-contact-form {
-    text-align: center;
-  }
-
-  #contact #main-contact-form button {
-    width: 65%;
-  }
-
-  /*TRAYECTORIA*/
-  #cta .row h2 {
-    font-size: 20px;
-    text-align: left;
-  }
-
-  /*FOOTER*/
-  #footer {
-    padding-bottom: 5px;
-  }
-
-  #footer .developer p {
-    float: left;
-    width: 90%;
-    line-height: 1.2;
-  }
-
-  .media.service-box {
-    min-height: auto;
-  }
+    height: 100%;
+    position: fixed;
+    z-index: 550;
+    background: #000;
+    opacity: 0.7;
+    display: none;
 }
 
+/******************** MEDIA QUERYS ***********************/
 @media only screen and (min-width: 768px) {
   #main-menu.navbar-default {
     background: rgba(255, 255, 255, 0.9);
@@ -809,6 +759,7 @@ ul.nostyle i {
 @media screen and (min-width: 992px) {
     #description-dp .social {
       margin-left: 4.5vw;
+      margin-top: 5px;
     }
 
 }
@@ -831,10 +782,11 @@ ul.nostyle i {
     width: 40%;
     clear: none;
     height: auto;
+    margin-right: 4%;
   }
 
   #description-dp .description-text {
-    width: 58%;
+    width: 56%;
     float: left;
     clear: none;
     margin-top: 15vw;
@@ -842,7 +794,6 @@ ul.nostyle i {
 
   #description-dp .description-text h3 {
     font-size: 5vw;
-    margin-top: 1vw;
     text-align: center;
   }
 
@@ -854,13 +805,42 @@ ul.nostyle i {
   #description-dp .social {
     margin-top: 10px;
     float: left;
-    width: 58%;
+    width: 56%;
     text-align: center;
   }
 
 }
 
 @media screen and (max-width: 767px) {
+  .section-header .section-title {
+    font-size: 30px;
+  }
+
+  .media.service-box .pull-left {
+    margin-right: 10px;
+  }
+
+  /*HEADER*/
+  #header .navbar-brand {
+    width: 75%;
+    float: left;
+    margin-left: 2%;
+    max-width: 280px;
+  }
+
+  #header .navbar-brand>img {
+    width: 100%;
+  }
+
+  #header .nav > li {
+    font-size: 17px;
+    box-shadow: 0 1px 1px #ddd;
+  }
+
+  #header .nav > li:last-child {
+    box-shadow: none;
+  }
+
   #description-dp .description-text h2 {
     font-size: 5vw;
   }
@@ -869,6 +849,53 @@ ul.nostyle i {
     font-size: 6.5vw;
   }
 
+  /*HOME*/
+  #main-slider .item {
+    height: 320px;
+  }
+
+  /*CONSULTORIO*/
+  #pricing .image-front {
+    margin-top: 20px;
+  }
+
+  #pricing .image-front img {
+    width: 100%;
+  }
+
+  /*CONTACTO*/
+  #contact #main-contact-form, #contact address {
+    width: 95%;
+  }
+
+  #contact #main-contact-form {
+    text-align: center;
+  }
+
+  #contact #main-contact-form button {
+    width: 65%;
+  }
+
+  /*TRAYECTORIA*/
+  #cta .row h2 {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  /*FOOTER*/
+  #footer {
+    padding-bottom: 5px;
+  }
+
+  #footer .developer p {
+    float: left;
+    width: 90%;
+    line-height: 1.2;
+  }
+
+  .media.service-box {
+    min-height: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
